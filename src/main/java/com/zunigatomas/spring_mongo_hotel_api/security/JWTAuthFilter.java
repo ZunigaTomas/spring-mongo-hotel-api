@@ -1,6 +1,6 @@
 package com.zunigatomas.spring_mongo_hotel_api.security;
 
-import com.zunigatomas.spring_mongo_hotel_api.service.impl.CustomUserDetailsService;
+import com.zunigatomas.spring_mongo_hotel_api.service.CustomUserDetailsService;
 import com.zunigatomas.spring_mongo_hotel_api.utils.JWTUtils;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

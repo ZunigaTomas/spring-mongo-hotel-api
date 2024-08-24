@@ -1,6 +1,6 @@
 package com.zunigatomas.spring_mongo_hotel_api.security;
 
-import com.zunigatomas.spring_mongo_hotel_api.service.impl.CustomUserDetailsService;
+import com.zunigatomas.spring_mongo_hotel_api.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

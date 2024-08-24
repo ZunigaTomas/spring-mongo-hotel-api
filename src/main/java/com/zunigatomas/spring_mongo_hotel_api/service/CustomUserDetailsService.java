@@ -1,7 +1,6 @@
-package com.zunigatomas.spring_mongo_hotel_api.service.impl;
+package com.zunigatomas.spring_mongo_hotel_api.service;
 
 import com.zunigatomas.spring_mongo_hotel_api.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
