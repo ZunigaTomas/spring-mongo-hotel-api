@@ -6,11 +6,11 @@ import com.zunigatomas.spring_mongo_hotel_api.exception.CustomException;
 import com.zunigatomas.spring_mongo_hotel_api.repository.*;
 import com.zunigatomas.spring_mongo_hotel_api.service.interfac.*;
 import com.zunigatomas.spring_mongo_hotel_api.utils.Utils;
-import org.springframework.data.domain.Sort;
-import org.springframework.security.core.parameters.P;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class BookingService implements IBookingService {
     private final BookingRepository bookingRepository;
     private final RoomRepository roomRepository;
@@ -99,7 +99,7 @@ public class BookingService implements IBookingService {
         Response response = new Response();
 
         try {
-            List<BookingDto> bookingDtoList = bookingRepository.findAll(Sort.by(Sort.Direction.DESC)).stream().map(Utils::mapBookingEntityToDto).toList();
+            List<BookingDto> bookingDtoList = bookingRepository.findAll().stream().map(Utils::mapBookingEntityToDto).toList();
             response.setBookingList(bookingDtoList);
             response.setStatusCode(200);
             response.setMessage("All bookings retrieved successfully");
