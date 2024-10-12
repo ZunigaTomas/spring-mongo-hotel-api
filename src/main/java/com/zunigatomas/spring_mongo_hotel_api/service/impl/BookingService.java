@@ -80,7 +80,8 @@ public class BookingService implements IBookingService {
 
         try {
             Booking booking = bookingRepository.findByBookingConfirmationCode(confirmationCode).orElseThrow(() -> new CustomException("Couldn't find booking with code: " + confirmationCode));
-            response.setBooking(Utils.mapBookingEntityToDto(booking));
+            BookingDto bookingDto = Utils.mapBookingEntityToDtoPlusBookedRooms(booking, true);
+            response.setBooking(bookingDto);
             response.setStatusCode(200);
             response.setMessage("Booking retrieved successfully");
         } catch (CustomException e) {
